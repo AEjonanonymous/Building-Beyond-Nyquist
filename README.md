@@ -1,5 +1,5 @@
 # <div align="center">Building Beyond Nyquist 
-## <div align="center"><i>Achieving Attosecond-Precision in Direct Digital Synthesis</i>
+## <div align="center"><i>Achieving Attosecond-Precision in Direct Digital Synthesis for Phase-Locked Waveform Control</i>
 
 ## 💡 The Paradigm Shift
 
