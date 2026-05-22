@@ -32,6 +32,33 @@ Nyquist was never the limit all along; industry architectures have simply been l
 
 ---
 
+## ✅ Verification & Simulation Results
+
+As detailed in Section IV of the accompanying manuscript, the simulation confirms a synthesizable digital architecture capable of bridging ultra-high-resolution timing requirements with the physical, clock-driven realities of standard silicon. 
+
+By scaling the `cfg_chirp_step` down to a customizable delta, the hardware core behaves as a **Universal Attosecond Direct Digital Synthesizer (DDS)**, eliminating the accumulative floating-point drift inherent in traditional software-timed simulation models.
+
+### 💻 Terminal Output Verification
+Executed via `iverilog` (IEEE 1800-2012 SystemVerilog standard) and the `vvp` runtime engine:
+
+```text
+[2026-05-19 13:30:27 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv && unbuffer vvp a.out
+
+--- UNIVERSAL WAVEFORM PROFILE VERIFICATION ---
+Target Profile Duration: 1768.94 fs
+Measured Cycle Duration: 1768.94 fs (Cycles counted: 176894)
+STATUS: PASSED - PHASE DETERMINISTIC MATCH ACHIEVED
+
+--- UNIVERSAL WAVEFORM PROFILE VERIFICATION ---
+Target Profile Duration: 500.00 fs
+Measured Cycle Duration: 500.00 fs (Cycles counted: 50000)
+STATUS: PASSED - PHASE DETERMINISTIC MATCH ACHIEVED
+
+testbench.sv:88: $finish called at 2279135 (1ps)
+Done
+```
+---
+
 ## 💼 Commercial Applications & Industrial Impact
 
 This universal pulse controller abstracts high-precision state tracking away from hardware speed limitations, enabling commercial R&D pipelines to bypass expensive, power-heavy ultra-high-frequency physical clock architectures. 
