@@ -23,7 +23,7 @@ Nyquist was never the limit all along; industry architectures have simply been l
 
 ### 📁 rtl/
   * 🎛️ `universal_pulse_controller.sv` — The core 64-bit numerical state-space engine. Fully synthesizable synchronous logic.
-  * 🎯 `universal_pulse_testbench.sv` — Comprehensive validation profile suite running the 10-attosecond step verification matrix.
+  * 🎯 `universal_pulse_testbench.sv` — Cycle-accurate verification harness utilizing discrete clock-edge counting to prove absolute phase determinism and zero accumulative drift across multi-parameter chirp profiles.
 
 ### 🔑 Key Technical Attributes
 * **Zero Accumulative Jitter:** Internal frequency tracking transitions strictly via single-cycle register accumulation ($f[n] = f[n-1] + \Delta f$), introducing precisely zero software latency or bus jitter.
