@@ -1,7 +1,7 @@
-# <div align="center">🏗️ Building Beyond Nyquist 🚀
+# <div align="center">🎛️ Building Beyond Nyquist 📡
 ## <div align="center"><i>Achieving Attosecond-Precision in Direct Digital Synthesis for Phase-Locked Waveform Control</i>
 
-## ⏱️ The Paradigm Shift
+## 🕰️ The Paradigm Shift
 
 When traditional hardware developers look at a problem requiring ultra-high temporal precision—such as sub-femtosecond or attosecond phase tracking—the immediate, reflexive instinct is to focus on the physical sampling rate of the system clock ($f_{clk}$). The standard assumption is that without a clock tree ticking at attosecond intervals, a system is fundamentally blind to that resolution. Engineers limit themselves by trying to solve a logic precision problem with raw physical clock speed.
 
@@ -68,7 +68,7 @@ This universal pulse controller abstracts high-precision state tracking away fro
 * **The Solution:** By maintaining an internal 64-bit numerical phase state with absolute zero accumulative drift, this IP guarantees deterministic phase alignment for microwave or laser control pulses, directly improving gate fidelity margins without physical hardware inflation.
 
 ### 📡 Next-Generation FMCW LiDAR
-* **The Bottleneck:** Frequency-Modulated Continuous-Wave (FMCW) LiDAR relies on perfectly linear frequency chirps to achieve high velocity and distance resolution. Phase non-linearities and timing jitter in the chirp create a "noise floor" that masks weak returns from distant or low-reflectivity targets.
+* **The Bottleneck:** Frequency-Modulated Continuous-Wave (FMCW) LiDAR relies on perfectly linear frequency chirps to achieve high velocity and distance resolution. Phase non-linearities and timing jitter in the chirp create a noise floor that masks weak returns from distant or low-reflectivity targets.
 * **The Solution:** The controller computes linear terahertz sweeps on-the-fly with perfect mathematical linearity. This ensures that transmitter-to-receiver local oscillator mixing remains free of digital synthesis anomalies, extending effective sensing range and signal-to-noise ratios (SNR).
 
 ### ⚡ Ultra-Fast Laser Spectroscopy & Optical Switching
