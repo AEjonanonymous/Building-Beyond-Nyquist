@@ -1,7 +1,7 @@
-# <div align="center">🏗️ Building Beyond Nyquist 
+# <div align="center">🏗️ Building Beyond Nyquist 🚀
 ## <div align="center"><i>Achieving Attosecond-Precision in Direct Digital Synthesis for Phase-Locked Waveform Control</i>
 
-## 💡 The Paradigm Shift
+## ⏱️ The Paradigm Shift
 
 When traditional hardware developers look at a problem requiring ultra-high temporal precision—such as sub-femtosecond or attosecond phase tracking—the immediate, reflexive instinct is to focus on the physical sampling rate of the system clock ($f_{clk}$). The standard assumption is that without a clock tree ticking at attosecond intervals, a system is fundamentally blind to that resolution. Engineers limit themselves by trying to solve a logic precision problem with raw physical clock speed.
 
@@ -16,13 +16,16 @@ Nyquist was never the limit all along; industry architectures have simply been l
 
 ---
 
-## 📂 Repository Contents
+## 📦 Repository Contents
 
-`universal_pulse_controller.sv`  # Synthesizable 64-bit core numerical state engine
+### 📁 docs/
+  * 📝 `Building Beyond Nyquist - Achieving Attosecond-Precision in Direct Digital Synthesis for Phase-Locked Waveform Control.pdf` — The formal academic paper detailing the mathematical proof and decoupling framework.
 
-`universal_pulse_testbench.sv`   # Comprehensive verification & profile testbench
+### 📁 rtl/
+  * 🎛️ `universal_pulse_controller.sv` — The core 64-bit numerical state-space engine. Fully synthesizable synchronous logic.
+  * 🎯 `universal_pulse_testbench.sv` — Comprehensive validation profile suite running the 10-attosecond step verification matrix.
 
-### Key Technical Attributes
+### 🔑 Key Technical Attributes
 * **Zero Accumulative Jitter:** Internal frequency tracking transitions strictly via single-cycle register accumulation ($f[n] = f[n-1] + \Delta f$), introducing precisely zero software latency or bus jitter.
 * **Deterministic Initialization:** Employs a precise phase-offset trigger synchronization loop ($\delta_{phase}$) to lock the digital execution edge identically across variable application runtime profiles.
 * **Hardware Agnostic:** Written in standard-compliant, synthesizable SystemVerilog. Fully compatible with modern high-speed FPGA fabric (Xilinx UltraScale+, Intel Stratix) and custom ASIC EDA synthesis toolchains.
@@ -49,24 +52,28 @@ This universal pulse controller abstracts high-precision state tracking away fro
 * **The Bottleneck:** Dynamic molecular bond dissociation via targeted periodic force fields requires coherent frequency tracking at terahertz scales (such as the 70.7 THz $N_2$ vibrational threshold) to match step-wise molecular state evolution.
 * **The Solution:** Provides the exact deterministic digital framework necessary to drive high-frequency plasmonic nano-antenna arrays or molecular force field controllers synchronously, preserving phase-locked coherence across precise downward energy-matched chirps.
 
-* **Lineage:** This architecture is a direct, generalized evolution of the target-specific tracking logic proved in the [Beyond-Haber-Bosch Repository](https://github.com/aejonanonymous/Beyond-Haber-Bosch).
+* **Related work:** This architecture is a direct, generalized evolution of the target-specific tracking logic proved in: <br>
+[Beyond-Haber-Bosch](https://github.com/aejonanonymous/Beyond-Haber-Bosch)
 ---
 
-## 🔑 Commercial Licensing & Inquiries
+## ⚖️ Commercial Licensing & Inquiries
 
 The code within this repository is open-sourced under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. 
-
-### Enterprise & Commercial Use
 The AGPL-3.0 license strictly requires that if you modify this core or integrate it into a proprietary software stack, hardware design, or commercial service (including cloud-hosted infrastructures), **you must open-source your entire surrounding software/hardware stack under the same AGPL license.**
 
 For companies wishing to embed this universal attosecond-deterministic core into proprietary commercial products, custom silicon implementations, or closed-source environments without AGPL obligations, **commercial licenses are available.**
 
-### Contact for Licensing & Consultation
-For commercial licensing agreements, custom architecture porting, or hardware synthesis validation inquiries, please contact:
+### 📜 Contact for Licensing & Consultation
+For commercial licensing agreements please contact:
 
-* **Author:** Jonathan Reed
-* **Academic/Professional Record:** [ORCID iD: 0009-0008-7345-1407](https://orcid.org/0009-0008-7345-1407)
-* **Inquiries:** *[Insert Preferred Professional Email or Link to GitHub Sponsor/Contact Page]*
+**Licensing Agent**: 
+
+J.E. Randolph 📧 `700josh.r@gmail.com`
+
+---
+
+**Author:** Jonathan $f(n)$ Reed <br>
+[ORCID iD: 0009-0008-7345-1407](https://orcid.org/0009-0008-7345-1407)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Language: SystemVerilog](https://img.shields.io/badge/Language-SystemVerilog-orange.svg)]()
