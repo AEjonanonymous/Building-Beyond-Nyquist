@@ -28,7 +28,7 @@ Nyquist was never the limit all along; industry architectures have simply been l
 ### Key Technical Attributes
 * **Zero Accumulative Jitter:** Internal frequency tracking transitions strictly via single-cycle register accumulation ($f[n] = f[n-1] + \Delta f$), introducing precisely zero software latency or bus jitter.
 * **Deterministic Initialization:** Employs a precise phase-offset trigger synchronization loop ($\delta_{phase}$) to lock the digital execution edge identically across variable application runtime profiles.
-* **Hardware Agnostic:** Written in standard-compliant, synthesizable IEEE 1800-2023 SystemVerilog. Fully compatible with modern high-speed FPGA fabric (Xilinx UltraScale+, Intel Stratix) and custom ASIC EDA synthesis toolchains.
+* **Hardware Agnostic:** Written in standard-compliant, synthesizable SystemVerilog. Fully compatible with modern high-speed FPGA fabric (Xilinx UltraScale+, Intel Stratix) and custom ASIC EDA synthesis toolchains.
 
 ---
 
@@ -61,7 +61,7 @@ The code within this repository is open-sourced under the **GNU Affero General P
 ### Enterprise & Commercial Use
 The AGPL-3.0 license strictly requires that if you modify this core or integrate it into a proprietary software stack, hardware design, or commercial service (including cloud-hosted infrastructures), **you must open-source your entire surrounding software/hardware stack under the same AGPL license.**
 
-For companies wishing to embed this universal attosecond-deterministic core into proprietary commercial products, custom silicon implementations, or closed-source environments without AGPL obligations, **commercial licenses are available directly from the author.**
+For companies wishing to embed this universal attosecond-deterministic core into proprietary commercial products, custom silicon implementations, or closed-source environments without AGPL obligations, **commercial licenses are available.**
 
 ### Contact for Licensing & Consultation
 For commercial licensing agreements, custom architecture porting, or hardware synthesis validation inquiries, please contact:
