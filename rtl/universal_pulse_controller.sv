@@ -1,4 +1,6 @@
 // universal_pulse_controller.sv
+// COPYRIGHT (c) 2026 Jonathan Reed 
+// CODE LICENSE: AGPL-3.0
 `timescale 1ns/1ps
 
 module universal_pulse_controller # (
