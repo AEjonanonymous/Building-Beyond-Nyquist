@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite this research as follows."
+authors:
+  - name: "Jonathan ƒ(n)"
+title: "Building Beyond Nyquist: Achieving Attosecond-Precision in Direct Digital Synthesis for Phase-Locked Waveform Control"
+version: 1.0.0
+doi: https: 10.5281/zenodo.20332250
+date-released: 2026-05-21
